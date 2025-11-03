@@ -1,0 +1,1901 @@
+/* Responsive Styles */
+:root {
+    --header-height-desktop: 80px;
+    --header-height-mobile: 70px;
+}
+
+/* General responsive utilities */
+.hide-on-mobile {
+    display: none !important;
+}
+
+@media (min-width: 769px) {
+    .hide-on-desktop {
+        display: none !important;
+    }
+    
+    .hide-on-mobile {
+        display: flex !important;
+    }
+}
+
+/* Header Responsive Styles */
+@media (max-width: 768px) {
+    .header {
+        background: rgba(255, 255, 255, 0.98);
+    }
+    
+    .header-content {
+        padding: 0.75rem 0;
+    }
+    
+    .logo-image {
+        height: 32px;
+    }
+    
+    .mobile-menu-toggle {
+        display: block !important;
+    }
+    
+    .nav {
+        display: none !important;
+    }
+    
+    .hero-container {
+        margin-top: var(--header-height-mobile);
+    }
+}
+
+@media (min-width: 769px) {
+    .hero-container {
+        margin-top: var(--header-height-desktop);
+    }
+}
+
+@media (max-width: 480px) {
+    .header-content {
+        padding: 0.5rem 0;
+    }
+    
+    .logo-image {
+        height: 28px;
+    }
+    
+    .mobile-menu {
+        padding: 1.5rem;
+    }
+    
+    .mobile-menu-header {
+        margin-bottom: 2rem;
+    }
+    
+    .mobile-nav-link {
+        font-size: var(--text-xl);
+        padding: 0.75rem 0;
+    }
+}
+
+/* Desktop first - Large screens */
+@media (min-width: 1921px) {
+    .container {
+        max-width: 1920px;
+        margin: 0 auto;
+    }
+}
+
+/* Desktop and smaller screens */
+@media (max-width: 1920px) {
+    .hero-container {
+        min-height: clamp(600px, 100vh, 900px);
+        padding: 0 clamp(20px, 4vw, 80px);
+    }
+    
+    .hero-left {
+        max-width: 50%;
+        padding-right: 2rem;
+    }
+    
+    .hero-right {
+        max-width: 50%;
+    }
+    
+    .hero-title {
+        font-size: clamp(48px, 4.5vw, 80px);
+        line-height: 1.1;
+    }
+    
+    .hero-subtitle {
+        font-size: clamp(20px, 1.8vw, 28px);
+        line-height: 1.4;
+    }
+    
+    .hero-worker-image {
+        max-width: 60%;
+        min-width: 50%;
+    }
+    
+    .phone-mockup {
+        width: clamp(200px, 20vw, 299.87px);
+    }
+    
+    .hero-cta-buttons {
+        flex-wrap: wrap;
+        gap: clamp(16px, 2vw, 24px);
+    }
+    
+    .app-store-button,
+    .google-play-button {
+        height: clamp(60px, 8vw, 75px);
+        width: auto;
+        min-width: clamp(180px, 20vw, 238px);
+    }
+}
+
+@media (min-width: 1024px) {
+  .hero-worker-image {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: auto;
+    height: 100%;
+    width: auto;
+    min-width: 40vw;
+    max-width: 70vw;
+    object-fit: cover;
+    z-index: 1;
+    pointer-events: none;
+  }
+}
+
+/* Laptops and smaller desktops */
+@media (max-width: 1440px) {
+    .hero-container {
+        min-height: clamp(600px, 80vh, 700px);
+        padding: 0 clamp(20px, 3vw, 60px);
+    }
+    
+    .hero-left {
+        padding-right: 1.5rem;
+    }
+    
+    .hero-title {
+        font-size: clamp(40px, 5vw, 56px);
+    }
+    
+    .hero-subtitle {
+        font-size: clamp(18px, 2vw, 22px);
+    }
+    
+    .hero-worker-image {
+        max-width: 55%;
+        min-width: 45%;
+    }
+    
+    .phone-mockup {
+        width: clamp(180px, 18vw, 220px);
+    }
+    
+    .app-store-button,
+    .google-play-button {
+        height: clamp(50px, 6vw, 60px);
+        min-width: clamp(160px, 18vw, 200px);
+    }
+}
+
+@media (max-width: 1024px) {
+    .hero-container {
+        flex-direction: column;
+        align-items: center;
+        min-height: auto;
+        padding: clamp(20px, 4vw, 40px);
+        text-align: center;
+    }
+    
+    .hero-left {
+        max-width: 100%;
+        padding-right: 0;
+        margin-bottom: 2rem;
+        order: 1;
+    }
+    
+    .hero-right {
+        max-width: 100%;
+        order: 2;
+        justify-content: center;
+    }
+    
+    .hero-title {
+        font-size: clamp(32px, 6vw, 48px);
+        text-align: center;
+    }
+    
+    .hero-subtitle {
+        font-size: clamp(16px, 3vw, 20px);
+        text-align: center;
+    }
+    
+    .hero-worker-image {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0.1;
+        z-index: 0;
+        object-position: center;
+    }
+    
+    .phone-mockup {
+        position: relative;
+        width: clamp(150px, 40vw, 250px);
+        margin: 0 auto;
+    }
+    
+    .hero-cta-buttons {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    
+    .app-store-button,
+    .google-play-button {
+        height: clamp(45px, 8vw, 55px);
+        min-width: clamp(140px, 35vw, 180px);
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-container {
+        padding: clamp(16px, 4vw, 24px);
+        min-height: auto;
+    }
+    
+    .hero-left {
+        margin-bottom: 1.5rem;
+    }
+    
+    .hero-title {
+        font-size: clamp(28px, 7vw, 36px);
+        margin-bottom: 1rem;
+    }
+    
+    .hero-subtitle {
+        font-size: clamp(14px, 4vw, 18px);
+        margin-bottom: 1.5rem;
+    }
+    
+    .hero-worker-image {
+        display: none;
+    }
+    
+    .phone-mockup {
+        width: clamp(120px, 35vw, 200px);
+    }
+    
+    .hero-cta-buttons {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+    
+    .app-store-button,
+    .google-play-button {
+        width: 100%;
+        max-width: 280px;
+        height: 50px;
+        min-width: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-container {
+        padding: 16px;
+    }
+    
+    .hero-left {
+        margin-bottom: 1rem;
+    }
+    
+    .hero-title {
+        font-size: clamp(24px, 8vw, 32px);
+        margin-bottom: 0.75rem;
+    }
+    
+    .hero-subtitle {
+        font-size: clamp(14px, 4vw, 16px);
+        margin-bottom: 1rem;
+    }
+    
+    .phone-mockup {
+        width: clamp(100px, 30vw, 150px);
+    }
+    
+    .app-store-button,
+    .google-play-button {
+        height: 45px;
+        max-width: 250px;
+    }
+}
+
+/* About Section Responsive Styles */
+@media (max-width: 1440px) {
+    .about {
+        padding: 80px 0;
+    }
+    
+    .about-content {
+        gap: 40px;
+    }
+    
+    .about-title {
+        font-size: clamp(36px, 4vw, 52px);
+        max-width: 600px;
+    }
+    
+    .about-description {
+        font-size: clamp(18px, 2vw, 24px);
+        max-width: 500px;
+    }
+    
+    .about-video {
+        height: 700px;
+        border-radius: 60px;
+    }
+    
+    .about-cards {
+        margin-top: -80px;
+    }
+    
+    .card {
+        padding: 24px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .about {
+        padding: 60px 0;
+    }
+    
+    .about-text {
+        flex-direction: column;
+        gap: 30px;
+        text-align: center;
+    }
+    
+    .about-title {
+        font-size: clamp(32px, 3.5vw, 36px);
+        max-width: 100%;
+    }
+    
+    .about-description {
+        font-size: clamp(16px, 1.8vw, 18px);
+        max-width: 100%;
+    }
+    
+    .about-video {
+        height: 500px;
+        border-radius: 40px;
+    }
+    
+    .about-cards {
+        grid-template-columns: repeat(2, 1fr);
+        margin-top: -60px;
+        gap: 16px;
+        padding: 0 16px;
+    }
+    
+    .card {
+        padding: 20px;
+    }
+    
+    .card-title {
+        font-size: 24px;
+        margin-bottom: 30px;
+    }
+    
+    .card-description {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 768px) {
+    .about {
+        padding: 40px 0;
+        margin-top: 100px;
+    }
+    
+    .about-content {
+        gap: 30px;
+    }
+    
+    .about-text {
+        padding: 0 16px;
+    }
+    
+    .about-title {
+        font-size: 28px;
+    }
+    
+    .about-description {
+        font-size: 16px;
+    }
+    
+    .about-video {
+        height: 400px;
+        border-radius: 30px;
+    }
+    
+    .about-cards {
+        grid-template-columns: 1fr;
+        margin-top: -40px;
+        gap: 16px;
+        padding: 0 16px;
+    }
+    
+    .card {
+        padding: 24px;
+    }
+    
+    .card-title {
+        font-size: 22px;
+        margin-bottom: 24px;
+    }
+    
+    .card-description {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .about {
+        padding: 30px 0;
+    }
+    
+    .about-title {
+        font-size: 24px;
+    }
+    
+    .about-description {
+        font-size: 14px;
+    }
+    
+    .about-video {
+        height: 300px;
+        border-radius: 20px;
+    }
+    
+    .about-cards {
+        margin-top: -30px;
+        gap: 12px;
+        padding: 0 12px;
+    }
+    
+    .card {
+        padding: 20px;
+    }
+    
+    .card-title {
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+    
+    .card-description {
+        font-size: 14px;
+    }
+}
+
+/* Easy Booking Section Responsive Styles */
+@media (max-width: 1440px) {
+    .easy-booking {
+        padding: 80px 0;
+    }
+    
+    .booking-content {
+        gap: 40px;
+    }
+    
+    .booking-header {
+        gap: 40px;
+    }
+    
+    .booking-title {
+        font-size: clamp(36px, 4vw, 52px);
+        max-width: 600px;
+    }
+    
+    .step-indicator {
+        font-size: clamp(60px, 6vw, 80px);
+    }
+    
+    .booking-card {
+        height: 400px;
+        padding: 40px;
+    }
+    
+    .booking-card-title {
+        font-size: clamp(28px, 3vw, 40px);
+    }
+    
+    .booking-card-description {
+        font-size: clamp(18px, 2vw, 24px);
+    }
+    
+    .booking-image {
+        width: 100%;
+        max-width: 1000px;
+        height: auto;
+        right: 20px;
+        top: -100px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .easy-booking {
+        padding: 60px 0;
+    }
+    
+    .booking-content {
+        gap: 30px;
+    }
+    
+    .booking-header {
+        flex-direction: column;
+        gap: 20px;
+        align-items: flex-start;
+    }
+    
+    .booking-title {
+        font-size: clamp(32px, 3.5vw, 36px);
+    }
+    
+    .step-indicator {
+        font-size: clamp(48px, 5vw, 60px);
+        text-align: left;
+    }
+    
+    .booking-card {
+        height: auto;
+        min-height: 350px;
+        padding: 30px;
+        flex-direction: column;
+    }
+    
+    .booking-card-content {
+        gap: 30px;
+    }
+    
+    .booking-image {
+        position: relative;
+        right: auto;
+        top: auto;
+        width: 100%;
+        max-width: 600px;
+        margin: 30px auto 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .easy-booking {
+        padding: 40px 0;
+    }
+    
+    .booking-content {
+        gap: 24px;
+    }
+    
+    .booking-header {
+        gap: 16px;
+    }
+    
+    .booking-title {
+        font-size: 28px;
+    }
+    
+    .step-indicator {
+        font-size: 40px;
+    }
+    
+    .booking-card {
+        padding: 24px;
+        border-radius: 20px;
+    }
+    
+    .booking-icon {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .booking-icon img {
+        width: 30px;
+        height: 30px;
+    }
+    
+    .booking-card-title {
+        font-size: 24px;
+    }
+    
+    .booking-card-description {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .easy-booking {
+        padding: 30px 0;
+    }
+    
+    .booking-content {
+        gap: 20px;
+    }
+    
+    .booking-title {
+        font-size: 24px;
+    }
+    
+    .step-indicator {
+        font-size: 32px;
+    }
+    
+    .booking-card {
+        padding: 20px;
+        border-radius: 16px;
+    }
+    
+    .booking-icon {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .booking-icon img {
+        width: 25px;
+        height: 25px;
+    }
+    
+    .booking-card-title {
+        font-size: 20px;
+    }
+    
+    .booking-card-description {
+        font-size: 14px;
+    }
+}
+
+/* App Section Responsive Styles */
+@media (max-width: 1440px) {
+    .app-section {
+        min-height: 700px;
+        padding: 80px 0;
+    }
+    
+    .app-content {
+        gap: 60px;
+        width: 100%;
+    }
+    
+    .app-text {
+        max-width: 600px;
+    }
+    
+    .app-title {
+        font-size: clamp(36px, 4vw, 52px);
+    }
+    
+    .app-description {
+        font-size: clamp(24px, 2.5vw, 32px);
+    }
+    
+    .app-features {
+        gap: 10px;
+    }
+    
+    .app-feature {
+        font-size: clamp(48px, 5vw, 80px);
+    }
+    
+    .app-devices {
+        width: 800px;
+        top: 100px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .app-section {
+        min-height: 600px;
+        padding: 60px 0;
+    }
+    
+    .app-content {
+        align-items: center;
+        text-align: center;
+        gap: 40px;
+    }
+    
+    .app-text {
+        max-width: 500px;
+        align-items: center;
+    }
+    
+    .app-title {
+        font-size: clamp(32px, 3.5vw, 36px);
+        text-align: center;
+    }
+    
+    .app-description {
+        font-size: clamp(20px, 2vw, 24px);
+        text-align: center;
+    }
+    
+    .app-features {
+        position: relative;
+        justify-content: center;
+        width: 100%;
+    }
+    
+    .app-feature {
+        font-size: clamp(40px, 4vw, 48px);
+    }
+    
+    .app-devices {
+        width: 100%;
+        max-width: 600px;
+        position: relative;
+        top: 0;
+        left: 0;
+    }
+    
+    .app-devices-img {
+        left: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .app-section {
+        min-height: 500px;
+        padding: 40px 0;
+    }
+    
+    .app-content {
+        gap: 30px;
+    }
+    
+    .app-text {
+        max-width: 100%;
+        padding: 0 20px;
+    }
+    
+    .app-title {
+        font-size: 28px;
+    }
+    
+    .app-description {
+        font-size: 18px;
+    }
+    
+    .app-features {
+        flex-direction: column;
+        gap: 5px;
+    }
+    
+    .app-feature {
+        font-size: 32px;
+    }
+    
+    .app-devices {
+        max-width: 100%;
+        padding: 0 20px;
+    }
+    
+    .app-devices-img {
+        width: 100%;
+        height: auto;
+    }
+    
+    .app-ellipse {
+        opacity: 0.3;
+    }
+}
+
+@media (max-width: 480px) {
+    .app-section {
+        padding: 30px 0;
+    }
+    
+    .app-text {
+        padding: 0 16px;
+    }
+    
+    .app-title {
+        font-size: 24px;
+    }
+    
+    .app-description {
+        font-size: 16px;
+    }
+    
+    .app-feature {
+        font-size: 28px;
+    }
+    
+    .app-devices {
+        padding: 0 16px;
+    }
+}
+
+/* FAQ Section Responsive Styles */
+@media (max-width: 1440px) {
+    .faq-section {
+        padding: 80px 0;
+    }
+    
+    .faq-title {
+        font-size: clamp(36px, 4vw, 52px);
+        margin-bottom: 40px;
+    }
+    
+    .faq-content {
+        gap: 16px;
+    }
+    
+    .faq-item {
+        padding: 30px;
+    }
+    
+    .question-text {
+        font-size: clamp(24px, 2.5vw, 32px);
+    }
+    
+    .faq-answer p {
+        font-size: clamp(18px, 2vw, 24px);
+    }
+}
+
+@media (max-width: 1024px) {
+    .faq-section {
+        padding: 60px 0;
+    }
+    
+    .faq-title {
+        font-size: clamp(32px, 3.5vw, 36px);
+        margin-bottom: 30px;
+        text-align: center;
+    }
+    
+    .faq-item {
+        padding: 24px;
+    }
+    
+    .question-text {
+        font-size: clamp(20px, 2vw, 24px);
+    }
+    
+    .faq-answer p {
+        font-size: clamp(16px, 1.8vw, 18px);
+    }
+}
+
+@media (max-width: 768px) {
+    .faq-section {
+        padding: 40px 0;
+    }
+    
+    .faq-title {
+        font-size: 28px;
+        margin-bottom: 24px;
+    }
+    
+    .faq-content {
+        gap: 12px;
+        padding: 0 20px;
+    }
+    
+    .faq-item {
+        padding: 20px;
+        border-radius: 16px;
+    }
+    
+    .question-text {
+        font-size: 18px;
+        padding-right: 32px;
+    }
+    
+    .faq-answer p {
+        font-size: 16px;
+    }
+    
+    .faq-arrow {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .faq-section {
+        padding: 30px 0;
+    }
+    
+    .faq-title {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+    
+    .faq-content {
+        gap: 8px;
+        padding: 0 16px;
+    }
+    
+    .faq-item {
+        padding: 16px;
+        border-radius: 12px;
+    }
+    
+    .question-text {
+        font-size: 16px;
+        padding-right: 24px;
+    }
+    
+    .faq-answer p {
+        font-size: 14px;
+    }
+    
+    .faq-arrow {
+        width: 16px;
+        height: 16px;
+    }
+}
+
+/* CTA Section and Footer Responsive Styles */
+@media (max-width: 1440px) {
+    .cta-section {
+        padding: 80px 0;
+    }
+    
+    .cta-content {
+        padding: 40px;
+    }
+    
+    .cta-image {
+        right: 60%;
+        width: 600px;
+        height: auto;
+    }
+    
+    .cta-title {
+        font-size: clamp(36px, 4vw, 48px);
+    }
+    
+    .cta-description {
+        font-size: clamp(18px, 2vw, 24px);
+    }
+    
+    .footer {
+        padding: 60px 0 40px;
+    }
+    
+    .footer-bottom {
+        gap: 40px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .cta-section {
+        padding: 60px 0;
+    }
+    
+    .cta-content {
+        padding: 30px;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .cta-image {
+        position: relative;
+        right: auto;
+        top: auto;
+        width: 100%;
+        max-width: 500px;
+        height: auto;
+        margin-bottom: 30px;
+    }
+    
+    .cta-text {
+        align-items: center;
+    }
+    
+    .cta-title {
+        font-size: clamp(32px, 3.5vw, 36px);
+        text-align: center;
+    }
+    
+    .cta-description {
+        font-size: clamp(16px, 1.8vw, 18px);
+        text-align: center;
+    }
+    
+    .footer-bottom {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+        text-align: center;
+    }
+    
+    .footer-apps {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .cta-section {
+        padding: 40px 0;
+    }
+    
+    .cta-content {
+        padding: 24px;
+        border-radius: 20px;
+    }
+    
+    .cta-image {
+        max-width: 400px;
+        margin-bottom: 24px;
+    }
+    
+    .cta-buttons {
+        flex-direction: column;
+        gap: 16px;
+        width: 100%;
+        align-items: center;
+    }
+    
+    .app-button {
+        width: 100%;
+        max-width: 280px;
+    }
+    
+    .footer {
+        padding: 40px 0 30px;
+    }
+    
+    /* Mobile-specific responsive improvements */
+    @media (max-width: 768px) {
+        .about-text {
+            flex-direction: column;
+            text-align: center;
+            gap: 20px;
+        }
+        
+        .about-cards {
+            grid-template-columns: 1fr;
+            gap: 16px;
+            margin-top: -40px;
+        }
+        
+        .booking-header {
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            gap: 20px;
+        }
+        
+        .booking-card {
+            flex-direction: column;
+            text-align: center;
+            min-height: auto;
+            padding: 30px 20px;
+        }
+        
+        .booking-image {
+            position: relative;
+            right: auto;
+            top: auto;
+            width: 100%;
+            max-width: 400px;
+            margin: 20px auto 0;
+            opacity: 0.6;
+        }
+        
+        .app-content {
+            align-items: center;
+            text-align: center;
+        }
+        
+        .app-text {
+            text-align: center;
+            max-width: 100%;
+        }
+        
+        .app-features {
+            position: relative;
+            justify-content: center;
+            margin: 20px 0;
+        }
+        
+        .app-devices {
+            position: relative;
+            top: 0;
+            left: 0;
+            width: 100%;
+            margin: 20px 0;
+        }
+        
+        .cta-content {
+            flex-direction: column;
+            text-align: center;
+        }
+        
+        .cta-image {
+            position: relative;
+            right: auto;
+            top: auto;
+            width: 100%;
+            max-width: 300px;
+            margin: 0 auto 20px;
+        }
+        
+        .cta-buttons {
+            justify-content: center;
+            width: 100%;
+        }
+        
+        .app-button {
+            width: 100%;
+            max-width: 200px;
+        }
+        
+        .footer-bottom {
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            gap: 20px;
+        }
+        
+        .footer-apps {
+            justify-content: center;
+            width: 100%;
+        }
+        
+        .footer-info {
+            align-items: center;
+            text-align: center;
+        }
+    }
+    
+    @media (max-width: 480px) {
+        .hero-cta-buttons {
+            width: 100%;
+        }
+        
+        .app-store-button,
+        .google-play-button {
+            width: 100%;
+            max-width: none;
+        }
+        
+        .about-cards {
+            margin-top: -30px;
+            gap: 12px;
+        }
+        
+        .card {
+            padding: 20px 16px;
+        }
+        
+        .booking-card {
+            padding: 24px 16px;
+        }
+        
+        .app-features {
+            flex-direction: column;
+            gap: 8px;
+        }
+        
+        .faq-content {
+            padding: 0 16px;
+        }
+        
+        .cta-content {
+            padding: 24px 16px;
+        }
+        
+        .footer-apps {
+            flex-direction: column;
+            gap: 12px;
+        }
+        
+        .footer-app-button {
+            width: 100%;
+            max-width: 200px;
+            justify-content: center;
+        }
+    }
+    
+    @media (max-width: 320px) {
+        .hero-title {
+            font-size: 24px;
+            line-height: 1.2;
+        }
+        
+        .hero-subtitle {
+            font-size: 14px;
+        }
+        
+        .about-title,
+        .booking-title,
+        .faq-title,
+        .cta-title {
+            font-size: 22px;
+        }
+        
+        .app-title {
+            font-size: 24px;
+        }
+        
+        .app-feature {
+            font-size: 32px;
+        }
+        
+        .card-title {
+            font-size: 18px;
+            margin-bottom: 16px;
+        }
+        
+        .card-description {
+            font-size: 13px;
+        }
+        
+        .question-text {
+            font-size: 16px;
+        }
+        
+        .faq-answer p {
+            font-size: 14px;
+        }
+    }
+    
+    /* Handle notched phones and safe areas */
+    @supports (padding: max(0px)) {
+        .header {
+            padding-left: max(16px, env(safe-area-inset-left));
+            padding-right: max(16px, env(safe-area-inset-right));
+        }
+        
+        .hero-left,
+        .about-text,
+        .about-cards,
+        .booking-content,
+        .app-text,
+        .app-devices,
+        .faq-content,
+        .cta-content,
+        .footer-content {
+            padding-left: max(16px, env(safe-area-inset-left));
+            padding-right: max(16px, env(safe-area-inset-right));
+        }
+        
+        .footer {
+            padding-bottom: max(20px, env(safe-area-inset-bottom));
+        }
+        
+        .mobile-menu {
+            padding-left: max(20px, env(safe-area-inset-left));
+            padding-right: max(20px, env(safe-area-inset-right));
+        }
+    }
+    
+    /* Landscape orientation adjustments for mobile */
+    @media (max-width: 768px) and (orientation: landscape) {
+        .hero-container {
+            min-height: auto;
+            padding: 20px;
+        }
+        
+        .hero-left {
+            margin-bottom: 1rem;
+        }
+        
+        .phone-mockup {
+            width: clamp(100px, 25vw, 150px);
+        }
+        
+        .about {
+            padding: 40px 0;
+        }
+        
+        .easy-booking,
+        .app-section,
+        .faq-section,
+        .cta-section {
+            padding: 40px 0;
+        }
+    }
+    
+    .footer-main {
+        padding-bottom: 24px;
+    }
+    
+    .footer-info {
+        align-items: center;
+        text-align: center;
+        max-width: none;
+    }
+    
+    .footer-contact {
+        align-items: center;
+    }
+    
+    .footer-apps {
+        flex-direction: column;
+        gap: 16px;
+    }
+    
+    .footer-app-button {
+        width: 100%;
+        max-width: 280px;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .cta-section {
+        padding: 30px 0;
+    }
+    
+    .cta-content {
+        padding: 20px;
+        border-radius: 16px;
+    }
+    
+    .cta-image {
+        max-width: 300px;
+        margin-bottom: 20px;
+    }
+    
+    .cta-title {
+        font-size: 24px;
+    }
+    
+    .cta-description {
+        font-size: 14px;
+    }
+    
+    .footer {
+        padding: 30px 0 20px;
+    }
+    
+    .footer-logo-img {
+        width: 100px;
+        height: auto;
+    }
+    
+    .contact-text,
+    .contact-phone,
+    .contact-email {
+        font-size: 14px;
+    }
+    
+    .footer-copyright {
+        font-size: 12px;
+    }
+}
+
+/* Hero_IMG Responsive Styles */
+@media (max-width: 1920px) {
+    #Hero_IMG {
+        width: 100% !important;
+        height: auto !important;
+        min-height: 900px;
+        max-width: 1920px;
+        margin: 0 auto;
+    }
+    
+    #image_146,
+    #image_146 img {
+        width: 100% !important;
+        max-width: 100% !important;
+        height: auto !important;
+    }
+    
+    #iPhone {
+        transform: scale(1);
+    }
+    
+    #Header {
+        width: 100% !important;
+        padding-left: clamp(20px, 4vw, 80px) !important;
+        padding-right: clamp(20px, 4vw, 178px) !important;
+    }
+    
+    #Frame_2087326384 {
+        width: auto !important;
+        max-width: 757px !important;
+        padding-left: clamp(20px, 4vw, 0) !important;
+    }
+}
+
+@media (max-width: 1440px) {
+    #Hero_IMG {
+        min-height: 750px;
+    }
+    
+    #image_146 {
+        max-width: calc(100% - 400px) !important;
+        height: 100% !important;
+        object-fit: cover !important;
+        object-position: right center !important;
+    }
+    
+    #iPhone {
+        transform: scale(0.85);
+        left: min(975px, 65%) !important;
+    }
+    
+    #Ellipse_22 {
+        transform: scale(0.85);
+        left: 70% !important;
+    }
+    
+    #Ellipse_19 {
+        transform: scale(0.8);
+        left: 75% !important;
+    }
+    
+    #__1, #__2, #__4, #__5, #__6, #__7 {
+        font-size: clamp(56px, 4vw, 72px) !important;
+    }
+    
+    #__8 {
+        font-size: clamp(22px, 1.8vw, 26px) !important;
+    }
+    
+    #Frame_2087326384 {
+        row-gap: 60px !important;
+        max-width: 680px !important;
+    }
+    
+    #Header {
+        padding-left: clamp(40px, 3vw, 60px) !important;
+    }
+}
+
+@media (max-width: 1200px) {
+    #Hero_IMG {
+        min-height: 700px;
+    }
+    
+    #image_146 {
+        max-width: calc(100% - 350px) !important;
+        height: 100% !important;
+        object-fit: cover !important;
+        object-position: right center !important;
+    }
+    
+    #iPhone {
+        transform: scale(0.75);
+        left: 60% !important;
+    }
+    
+    #Frame_2087326384 {
+        max-width: 600px !important;
+        row-gap: 50px !important;
+    }
+    
+    #__1, #__2, #__4, #__5, #__6, #__7 {
+        font-size: clamp(48px, 4.5vw, 64px) !important;
+    }
+    
+    #__8 {
+        font-size: clamp(20px, 2vw, 24px) !important;
+    }
+}
+
+@media (max-width: 1024px) {
+    #Hero_IMG {
+        min-height: 650px;
+    }
+    
+    #image_146 {
+        max-width: calc(100% - 250px) !important;
+        height: 100% !important;
+        object-fit: cover !important;
+        object-position: right center !important;
+    }
+    
+    #iPhone {
+        transform: scale(0.65);
+        left: 55% !important;
+    }
+    
+    #Ellipse_22,
+    #Ellipse_19 {
+        opacity: 0.5;
+        transform: scale(0.7) !important;
+    }
+    
+    #__1, #__2, #__4, #__5, #__6, #__7 {
+        font-size: clamp(40px, 4.5vw, 52px) !important;
+        line-height: 1.2 !important;
+    }
+    
+    #__8 {
+        font-size: clamp(18px, 2vw, 22px) !important;
+    }
+    
+    #Frame_2087326384 {
+        max-width: 550px !important;
+        row-gap: 40px !important;
+    }
+    
+    #Header {
+        padding: 28px clamp(20px, 3vw, 40px) 14px clamp(20px, 3vw, 40px) !important;
+        gap: 32px !important;
+    }
+    
+    #Frame_2087326347 {
+        gap: 32px !important;
+    }
+    
+    #Frame_2 {
+        gap: 20px !important;
+    }
+    
+    #Frame_2087326377,
+    #Frame_2087326376 {
+        height: 65px !important;
+        padding: 10px 20px !important;
+    }
+}
+
+@media (max-width: 768px) {
+    #Hero_IMG {
+        min-height: 550px;
+        padding: 0 !important;
+    }
+    
+    #image_146 {
+        display: none;
+    }
+    
+    #iPhone {
+        position: relative !important;
+        left: 50% !important;
+        top: auto !important;
+        transform: translateX(-50%) scale(0.5);
+        margin-top: 40px;
+    }
+    
+    #Frame_2087326384 {
+        position: relative !important;
+        top: auto !important;
+        left: auto !important;
+        transform: none !important;
+        width: 100% !important;
+        padding: 40px 20px !important;
+        max-width: 100% !important;
+        row-gap: 30px !important;
+        margin: 0 !important;
+    }
+    
+    #Frame_4752 {
+        row-gap: 20px !important;
+    }
+    
+    #_1_229 {
+        text-align: center !important;
+    }
+    
+    #_1_230 {
+        text-align: center !important;
+        margin: 0 !important;
+    }
+    
+    #Frame_2087326378 {
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 16px !important;
+    }
+    
+    #Frame_2087326377,
+    #Frame_2087326376 {
+        width: 100% !important;
+        max-width: 280px !important;
+    }
+    
+    #Header {
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 20px !important;
+        padding: 20px !important;
+    }
+    
+    #Frame_2087326347 {
+        flex-direction: column !important;
+        gap: 20px !important;
+    }
+    
+    #Frame_2 {
+        flex-wrap: wrap !important;
+        justify-content: center !important;
+        gap: 16px !important;
+    }
+    
+    #DOIVO_2 {
+        transform: scale(0.9);
+    }
+}
+
+@media (max-width: 480px) {
+    #Hero_IMG {
+        min-height: 500px;
+    }
+    
+    #iPhone {
+        transform: translateX(-50%) scale(0.4);
+        margin-top: 20px;
+    }
+    
+    #Frame_2087326384 {
+        padding: 30px 16px !important;
+        row-gap: 24px !important;
+    }
+    
+    #__1, #__2, #__4, #__5, #__6, #__7 {
+        font-size: clamp(28px, 6vw, 36px) !important;
+    }
+    
+    #__8 {
+        font-size: clamp(16px, 3vw, 20px) !important;
+    }
+    
+    #Frame_2087326377,
+    #Frame_2087326376 {
+        max-width: 240px !important;
+        height: 60px !important;
+    }
+    
+    #googleplay,
+    #appstore {
+        transform: scale(0.9);
+    }
+    
+    #Frame_2087326377,
+    #Frame_2087326376 {
+        padding: 10px 16px !important;
+    }
+}
+
+/* Landscape orientation for mobile devices */
+@media (max-width: 768px) and (orientation: landscape) {
+    #Hero_IMG {
+        min-height: 400px;
+    }
+    
+    #iPhone {
+        transform: translateX(-50%) scale(0.4);
+        margin-top: 20px;
+    }
+    
+    #Frame_2087326384 {
+        padding: 20px 16px !important;
+        row-gap: 20px !important;
+    }
+    
+    #__1, #__2, #__4, #__5, #__6, #__7 {
+        font-size: clamp(24px, 5vw, 32px) !important;
+    }
+    
+    #__8 {
+        font-size: clamp(14px, 2.5vw, 18px) !important;
+    }
+    
+    #Header {
+        padding: 16px !important;
+        gap: 16px !important;
+    }
+}
+
+/* Very small devices */
+@media (max-width: 360px) {
+    #Hero_IMG {
+        min-height: 450px;
+    }
+    
+    #iPhone {
+        transform: translateX(-50%) scale(0.35);
+    }
+    
+    #__1, #__2, #__4, #__5, #__6, #__7 {
+        font-size: clamp(24px, 7vw, 32px) !important;
+    }
+    
+    #__8 {
+        font-size: clamp(14px, 3vw, 18px) !important;
+    }
+    
+    #Frame_2087326384 {
+        padding: 24px 12px !important;
+    }
+    
+    #Frame_2087326377,
+    #Frame_2087326376 {
+        max-width: 220px !important;
+        height: 55px !important;
+        padding: 8px 12px !important;
+    }
+}
+
+/* Handle notched phones and safe areas */
+@supports (padding: max(0px)) {
+    .hero-header {
+        padding-left: max(16px, env(safe-area-inset-left));
+        padding-right: max(16px, env(safe-area-inset-right));
+    }
+    
+    .hero-content,
+    .about-text,
+    .about-cards,
+    .booking-content,
+    .app-text,
+    .app-devices,
+    .faq-content,
+    .cta-content,
+    .footer-content {
+        padding-left: max(16px, env(safe-area-inset-left));
+        padding-right: max(16px, env(safe-area-inset-right));
+    }
+    
+    .footer {
+        padding-bottom: max(20px, env(safe-area-inset-bottom));
+    }
+}
+
+@media (max-width: 1395px) {
+    #image_146 {
+        display: none !important;
+    }
+    
+    #Frame_2087326384 {
+        max-width: 680px !important;
+        width: 100% !important;
+        margin: 0 auto !important;
+        padding: 0 20px !important;
+        position: relative !important;
+    }
+    
+    #Header {
+        position: absolute !important;
+        top: -60px !important;
+        left: 0 !important;
+        width: 100% !important;
+        justify-content: flex-start !important;
+        padding: 0 20px !important;
+    }
+    
+    #Frame_2087326347 {
+        justify-content: flex-start !important;
+    }
+    
+    #__1, #__2, #__4, #__5, #__6, #__7 {
+        font-size: clamp(40px, 5vw, 52px) !important;
+    }
+    
+    #__8 {
+        font-size: clamp(18px, 2.5vw, 22px) !important;
+    }
+    
+    #Ellipse_22,
+    #Ellipse_19 {
+        display: none !important;
+    }
+}
+
+@media (max-width: 375px) {
+    #Hero_IMG {
+        min-height: 520px;
+        padding: 0 !important;
+    }
+
+    #Frame_2087326384 {
+        padding: 24px 16px !important;
+        row-gap: 20px !important;
+        max-width: 100% !important;
+    }
+
+    #Frame_2087326378 {
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 12px !important;
+    }
+
+    #__1, #__2, #__4, #__5, #__6, #__7 {
+        font-size: clamp(24px, 7.5vw, 30px) !important;
+        line-height: 1.2 !important;
+    }
+
+    #__8 {
+        font-size: clamp(14px, 4vw, 16px) !important;
+        line-height: 1.4 !important;
+    }
+
+    #iPhone {
+        position: relative !important;
+        left: 50% !important;
+        top: auto !important;
+        transform: translateX(-50%) scale(0.38) !important;
+        margin-top: 16px !important;
+    }
+
+    #Frame_2087326377,
+    #Frame_2087326376 {
+        max-width: 220px !important;
+        width: 100% !important;
+        height: 54px !important;
+        padding: 10px 14px !important;
+    }
+
+    #Header {
+        padding: 16px !important;
+        gap: 16px !important;
+    }
+}
+
+@media (max-width: 768px) {
+    /* First HERO: stack workers image on top, then text/buttons; hide phone */
+    #Hero_IMG {
+        display: flex !important;
+        flex-direction: column !important;
+        min-height: auto !important;
+        padding: 0 !important;
+    }
+
+    #image_146 {
+        display: block !important;
+        position: static !important;
+        width: 100% !important;
+        height: auto !important;
+        max-width: 100% !important;
+        overflow: hidden !important;
+        order: 1 !important;
+    }
+
+    #image_146 img {
+        width: 100% !important;
+        height: auto !important;
+        object-fit: cover !important;
+        position: static !important;
+        transform: none !important;
+    }
+
+    #Frame_2087326384 {
+        position: static !important;
+        top: auto !important;
+        left: auto !important;
+        transform: none !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 16px !important;
+        margin: 0 !important;
+        row-gap: 16px !important;
+        order: 2 !important;
+    }
+
+    #iPhone {
+        display: none !important;
+    }
+
+    #Ellipse_22,
+    #Ellipse_19,
+    #Union,
+    #Header {
+        position: absolute !important; /* keep header positioning */
+    }
+
+    /* Hide desktop header nav on mobile */
+    #Frame_2,
+    #Frame_4558 {
+        display: none !important;
+    }
+
+    /* Show hamburger */
+    .mobile-menu-toggle {
+        display: block !important;
+    }
+}
